@@ -261,6 +261,380 @@ const NewsData = [
     }
 ]
 
+const CommentsData = [
+    {    
+        id: 13,
+        message: [
+            [
+                {
+                    user_name: '乔丹MVP',
+                    add_time: '2021-02-26T22:23:34.000Z',
+                    content: '乔丹不可撼动'
+                },
+                {
+                    user_name: '库里MVP',
+                    add_time: '2021-02-26T22:33:34.000Z',
+                    content: '还是不要改吧'
+                },
+                {
+                    user_name: '科比MVP',
+                    add_time: '2021-02-26T22:23:24.000Z',
+                    content: '可以，但没必要'
+                }
+            ],
+            [
+                {
+                    user_name: '哈登MVP',
+                    add_time: '2021-02-26T22:23:14.000Z',
+                    content: '那以后不是也得换'
+                },
+                {
+                    user_name: '小帅MVP',
+                    add_time: '2021-02-26T22:13:34.000Z',
+                    content: '科比值得'
+                },
+                {
+                    user_name: '民工杜MVP',
+                    add_time: '2021-02-26T23:23:34.000Z',
+                    content: '欧文真的是科比最大球迷了'
+                }
+            ],
+            [
+                {
+                    user_name: '龟龟MVP',
+                    add_time: '2021-02-26T22:53:34.000Z',
+                    content: '乔丹还是goat'
+                }
+            ]
+        ]
+    },
+    {    
+        id: 14,
+        message: [
+            [
+                {
+                    user_name: '乔丹MVP',
+                    add_time: '2021-02-26T22:23:34.000Z',
+                    content: '豪气'
+                },
+                {
+                    user_name: '库里MVP',
+                    add_time: '2021-02-26T22:33:34.000Z',
+                    content: '爵士老板有眼界'
+                },
+                {
+                    user_name: '科比MVP',
+                    add_time: '2021-02-26T22:23:24.000Z',
+                    content: '爵士总冠军'
+                }
+            ],
+            [
+                {
+                    user_name: '哈登MVP',
+                    add_time: '2021-02-26T22:23:14.000Z',
+                    content: '湖人继续加油啊'
+                },
+                {
+                    user_name: '小帅MVP',
+                    add_time: '2021-02-26T22:13:34.000Z',
+                    content: '浓眉好好休息'
+                },
+                {
+                    user_name: '民工杜MVP',
+                    add_time: '2021-02-26T23:23:34.000Z',
+                    content: '眉，队危，速归'
+                }
+            ],
+            [
+                {
+                    user_name: '龟龟MVP',
+                    add_time: '2021-02-26T22:53:34.000Z',
+                    content: '米切尔MVP'
+                }
+            ]
+        ]
+    },
+    {    
+        id: 15,
+        message: [
+            [
+                {
+                    user_name: '乔丹MVP',
+                    add_time: '2021-02-26T22:23:34.000Z',
+                    content: '乔丹霸气'
+                },
+                {
+                    user_name: '库里MVP',
+                    add_time: '2021-02-26T22:33:34.000Z',
+                    content: '老詹不行啊'
+                },
+                {
+                    user_name: '科比MVP',
+                    add_time: '2021-02-26T22:23:24.000Z',
+                    content: '乔丹yyds'
+                }
+            ],
+            [
+                {
+                    user_name: '哈登MVP',
+                    add_time: '2021-02-26T22:23:14.000Z',
+                    content: '老詹会成为goat的'
+                },
+                {
+                    user_name: '小帅MVP',
+                    add_time: '2021-02-26T22:13:34.000Z',
+                    content: '老詹再拿一次MVP'
+                },
+                {
+                    user_name: '民工杜MVP',
+                    add_time: '2021-02-26T23:23:34.000Z',
+                    content: '乔神'
+                }
+            ]
+        ]
+    },
+    {    
+        id: 16,
+        message: [
+            [
+                {
+                    user_name: '乔丹MVP',
+                    add_time: '2021-02-26T22:23:34.000Z',
+                    content: '肯定有啊'
+                },
+                {
+                    user_name: '库里MVP',
+                    add_time: '2021-02-26T22:33:34.000Z',
+                    content: '一次全明星MVP就可'
+                },
+                {
+                    user_name: '科比MVP',
+                    add_time: '2021-02-26T22:23:24.000Z',
+                    content: '欧文含泪点灭'
+                }
+            ],
+            [
+                {
+                    user_name: '哈登MVP',
+                    add_time: '2021-02-26T22:23:14.000Z',
+                    content: '全明星没啥含金量吧'
+                },
+                {
+                    user_name: '小帅MVP',
+                    add_time: '2021-02-26T22:13:34.000Z',
+                    content: '有什么意义吗'
+                },
+                {
+                    user_name: '民工杜MVP',
+                    add_time: '2021-02-26T23:23:34.000Z',
+                    content: '啥数据都有'
+                }
+            ],
+            [
+                {
+                    user_name: '龟龟MVP',
+                    add_time: '2021-02-26T22:53:34.000Z',
+                    content: '的确，全明星看个乐'
+                }
+            ]
+        ]
+    },
+    {    
+        id: 17,
+        message: [
+            [
+                {
+                    user_name: '乔丹MVP',
+                    add_time: '2021-02-26T22:23:34.000Z',
+                    content: '快船总冠军'
+                },
+                {
+                    user_name: '库里MVP',
+                    add_time: '2021-02-26T22:33:34.000Z',
+                    content: '湖人总冠军'
+                },
+                {
+                    user_name: '科比MVP',
+                    add_time: '2021-02-26T22:23:24.000Z',
+                    content: '篮网总冠军'
+                }
+            ],
+            [
+                {
+                    user_name: '哈登MVP',
+                    add_time: '2021-02-26T22:23:14.000Z',
+                    content: '湖人继续加油啊'
+                }
+            ]
+        ]
+    },
+    {    
+        id: 18,
+        message: [
+            [
+                {
+                    user_name: '乔丹MVP',
+                    add_time: '2021-02-26T22:23:34.000Z',
+                    content: '三巨头真的强'
+                },
+                {
+                    user_name: '库里MVP',
+                    add_time: '2021-02-26T22:33:34.000Z',
+                    content: '小帅太牛了'
+                },
+                {
+                    user_name: '科比MVP',
+                    add_time: '2021-02-26T22:23:24.000Z',
+                    content: '这个组合历史最佳了吧'
+                }
+            ],
+            [
+                {
+                    user_name: '哈登MVP',
+                    add_time: '2021-02-26T22:23:14.000Z',
+                    content: '哈登MVP'
+                },
+                {
+                    user_name: '小帅MVP',
+                    add_time: '2021-02-26T22:13:34.000Z',
+                    content: '看我id'
+                }
+            ]
+        ]
+    },
+    {    
+        id: 19,
+        message: [
+            [
+                {
+                    user_name: '乔丹MVP',
+                    add_time: '2021-02-26T22:23:34.000Z',
+                    content: '字母歌练练篮会很可怕'
+                },
+                {
+                    user_name: '库里MVP',
+                    add_time: '2021-02-26T22:33:34.000Z',
+                    content: '大帝真的强'
+                },
+                {
+                    user_name: '科比MVP',
+                    add_time: '2021-02-26T22:23:24.000Z',
+                    content: '唐斯真的技术全面'
+                }
+            ],
+            [
+                {
+                    user_name: '哈登MVP',
+                    add_time: '2021-02-26T22:23:14.000Z',
+                    content: 'Lisa离开木狼吧'
+                },
+                {
+                    user_name: '小帅MVP',
+                    add_time: '2021-02-26T22:13:34.000Z',
+                    content: '浓眉好好休息'
+                }
+            ]
+        ]
+    },
+    {    
+        id: 20,
+        message: [
+            [
+                {
+                    user_name: '乔丹MVP',
+                    add_time: '2021-02-26T22:23:34.000Z',
+                    content: '石佛'
+                },
+                {
+                    user_name: '库里MVP',
+                    add_time: '2021-02-26T22:33:34.000Z',
+                    content: '奥尼尔'
+                },
+                {
+                    user_name: '小帅MVP',
+                    add_time: '2021-02-26T22:13:34.000Z',
+                    content: '肯定张伯伦啊'
+                }
+            ],
+            [
+                {
+                    user_name: '民工杜MVP',
+                    add_time: '2021-02-26T23:23:34.000Z',
+                    content: '远古巨兽'
+                },
+                {
+                    user_name: '龟龟MVP',
+                    add_time: '2021-02-26T22:53:34.000Z',
+                    content: '阿呆'
+                }
+            ],
+        ]
+    },
+    {    
+        id: 21,
+        message: [
+            [
+                {
+                    user_name: '哈登MVP',
+                    add_time: '2021-02-26T22:23:14.000Z',
+                    content: '哈登MVP'
+                },
+                {
+                    user_name: '小帅MVP',
+                    add_time: '2021-02-26T22:13:34.000Z',
+                    content: '登哥历史级别的进攻手'
+                },
+                {
+                    user_name: '民工杜MVP',
+                    add_time: '2021-02-26T23:23:34.000Z',
+                    content: '哈登最强'
+                }
+            ],
+            [
+                {
+                    user_name: '龟龟MVP',
+                    add_time: '2021-02-26T22:53:34.000Z',
+                    content: '拿下那该死的冠军'
+                }
+            ]
+            ]
+    },
+    {    
+        id: 22,
+        message: [
+            [
+                {
+                    user_name: '库里MVP',
+                    add_time: '2021-02-26T22:33:34.000Z',
+                    content: '库里MVP'
+                },
+                {
+                    user_name: '小帅MVP',
+                    add_time: '2021-02-26T22:13:34.000Z',
+                    content: '想当年的五星勇士'
+                },
+                {
+                    user_name: '民工杜MVP',
+                    add_time: '2021-02-26T23:23:34.000Z',
+                    content: '拥有阿杜的美好'
+                }
+            ],
+            [
+                {
+                    user_name: '龟龟MVP',
+                    add_time: '2021-02-26T22:53:34.000Z',
+                    content: '继续创纪录'
+                },
+                {
+                    user_name: '萌神库',
+                    add_time: '2021-02-26T22:53:34.000Z',
+                    content: ''
+                }
+            ]
+        ]
+    }
+]
+
 Mock.mock('http://vue-shopping-mall/data/getSlideshow', 'get', SlideshowData)
 Mock.mock('http://vue-shopping-mall/data/getNewslist', 'get', NewsListData)
 Mock.mock(/http:\/\/vue-shopping-mall\/data\/getnew\/\d+/, 'get', function (options) {
@@ -275,4 +649,25 @@ Mock.mock(/http:\/\/vue-shopping-mall\/data\/getnew\/\d+/, 'get', function (opti
         }
     }
     return {}
+})
+Mock.mock(/http:\/\/vue-shopping-mall\/data\/getcomments\/\d+\?pageindex=\d+/, 'get', function (options) {
+    const regex = /[\d]+/g;
+    var matchArr = [];
+    var match;
+    const len = CommentsData.length;
+    while((match = regex.exec(options.url)) != null) {
+        matchArr = matchArr.concat(match)
+    }
+    for(let i = 0; i < len; i++) {
+        if(matchArr[0] == CommentsData[i].id && matchArr[1] <= CommentsData[i].message.length) {
+            return {
+                status: 0,
+                message: CommentsData[i].message[matchArr[1] - 1]
+            }
+        }
+    }
+    return {
+        status: 0,
+        message: []
+    }
 })
