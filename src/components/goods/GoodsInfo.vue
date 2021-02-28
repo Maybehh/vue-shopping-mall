@@ -23,13 +23,13 @@
                     <p class="price">
                         市场价：<del>￥{{ goodsinfo.market_price }}</del>&nbsp;&nbsp;销售价：<span class="now_price">￥{{ goodsinfo.sell_price }}</span>
                     </p>
-                    <p>购买数量：<numbox></numbox></p> <!-- @getcount="getSelectedCount" :max="goodsinfo.stock_quantity"-->
+                    <p>购买数量：<numbox @getcount="getSelectedCount" :max="goodsinfo.stock_quantity"></numbox></p>
                     <p>
                         <mt-button type="primary" size="small">立即购买</mt-button>
                         <mt-button type="danger" size="small" @click="addToShopCar">加入购物车</mt-button>
                         <!-- 分析： 如何实现加入购物车时候，拿到 选择的数量 -->
                         <!-- 1. 经过分析发现： 按钮属于 goodsinfo 页面， 数字 属于 numberbox 组件 -->
-                        <!-- 2. 由于涉及到了父子组件的嵌套了，所以，无法直接在 goodsinfo 页面zhong 中获取到 选中的商品数量值-->
+                        <!-- 2. 由于涉及到了父子组件的嵌套了，所以，无法直接在 goodsinfo 页面中获取到 选中的商品数量值-->
                         <!-- 3. 怎么解决这个问题：涉及到了 子组件向父组件传值了（事件调用机制） -->
                         <!-- 4. 事件调用的本质： 父向子传递方法，子调用这个方法， 同时把 数据当作参数 传递给这个方法 -->
                     </p>
@@ -66,7 +66,7 @@ export default {
           Slideshow: [],
           goodsinfo: {},
           ballFlag: false,
-          selectedCount: 1 // 保存用户选中的商品数量， 默认，认为用户买1个
+          selectedCount: 1
       }
     },
     created() {
@@ -89,7 +89,6 @@ export default {
             this.$http.get("goods/getinfo/" + this.id).then(result => {
                 if (result.body.status === 0) {
                     this.goodsinfo = result.body.message[0];
-                    console.log(this.goodsinfo)
                 }
             })
         },
@@ -100,17 +99,15 @@ export default {
             this.$router.push({ name: "goodscomment", params: { id } });
         },
         addToShopCar () {
-            // 添加到购物车
             this.ballFlag = !this.ballFlag;
-            // { id:商品的id, count: 要购买的数量, price: 商品的单价，selected: false  }
-            // 拼接出一个，要保存到 store 中 car 数组里的 商品信息对象
-            var goodsinfo = {
+
+            const goodsinfo = {
                 id: this.id,
                 count: this.selectedCount,
                 price: this.goodsinfo.sell_price,
                 selected: true
             }
-            // 调用 store 中的 mutations 来将商品加入购物车
+            
             this.$store.commit("addToCar", goodsinfo);
         },
         beforeEnter (el) {
@@ -141,11 +138,9 @@ export default {
         afterEnter(el) {
             this.ballFlag = !this.ballFlag;
         },
-        // getSelectedCount(count) {
-        //     // 当子组件把 选中的数量传递给父组件的时候，把选中的值保存到 data 上
-        //     this.selectedCount = count;
-        //     console.log("父组件拿到的数量值为： " + this.selectedCount);
-        // }
+        getSelectedCount(count) {
+            this.selectedCount = count;
+        }
     },
     components: {
         swiper,

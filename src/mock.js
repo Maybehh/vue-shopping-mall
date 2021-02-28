@@ -1095,7 +1095,6 @@ Mock.mock(/http:\/\/vue-shopping-mall\/data\/getthumbsimages\/\d+/, 'get', funct
     const match = regex.exec(options.url);
     const len = ThumbsImagesData.length;
     for(let i = 0; i < len; i++) {
-        console.log(match[0])
         if(ThumbsImagesData[i].id == match[0]) {
             return {
                 status: 0,
@@ -1134,8 +1133,6 @@ Mock.mock(/http:\/\/vue-shopping-mall\/data\/goods\/getinfo\/\d+/, 'get', functi
     const match = regex.exec(options.url);
     const len = GoodsInfoData.length;
     for(let i = 0; i < len; i++) {
-        console.log(match[0])
-        console.log(GoodsInfoData[i].id)
         if(GoodsInfoData[i].id == match[0]) {
             return {
                 status: 0,
@@ -1153,8 +1150,6 @@ Mock.mock(/http:\/\/vue-shopping-mall\/data\/goods\/getdesc\/\d+/, 'get', functi
     const match = regex.exec(options.url);
     const len = GoodsInfoData.length;
     for(let i = 0; i < len; i++) {
-        console.log(match[0])
-        console.log(GoodsInfoData[i].id)
         if(GoodsInfoData[i].id == match[0]) {
             return {
                 status: 0,

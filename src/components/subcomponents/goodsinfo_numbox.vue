@@ -6,9 +6,6 @@
         <input id="test" class="mui-input-numbox" type="number" value="1" @change="countChanged" ref="numbox" />
         <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
     </div>
-
-  <!-- 分析： 子组件什么时候把 数据传递给父组件 -->
-  <!--  -->
 </template>
 
 <script>
@@ -18,20 +15,18 @@ export default {
     mounted() {
         // 初始化数字选择框组件
         mui(".mui-numbox").numbox();
-        console.log(this.max);
+        console.log(this.max);  //由于父组件的then获取数据后再传参，因此这里是undefined
     },
     methods: {
         countChanged() {
             // 每当 文本框的数据被修改的时候，立即把 最新的数据，通过事件调用，传递给父组件
-            // console.log(this.$refs.numbox.value);
             this.$emit("getcount", parseInt(this.$refs.numbox.value));
         }
     },
     props: ["max"],
     watch: {
-        // 属性监听
         max: function(newVal, oldVal) {
-            // 使用 JS API 设置 numbox 的最大值
+            // 只能使用 JS API 设置 numbox 的最大值，不能直接给data-numbox-max属性动态设置，是无效的，官文有说
             mui(".mui-numbox")
               .numbox()
               .setOption("max", newVal);
