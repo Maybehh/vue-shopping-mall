@@ -990,6 +990,7 @@ const GoodsInfoData = [
         `
     }
 ]
+
 Mock.mock('http://vue-shopping-mall/data/getSlideshow', 'get', SlideshowData)
 Mock.mock('http://vue-shopping-mall/data/getNewslist', 'get', NewsListData)
 Mock.mock(/http:\/\/vue-shopping-mall\/data\/getnew\/\d+/, 'get', function (options) {
@@ -1160,5 +1161,28 @@ Mock.mock(/http:\/\/vue-shopping-mall\/data\/goods\/getdesc\/\d+/, 'get', functi
     return {
         status: 0,
         message: []
+    }
+})
+Mock.mock(/http:\/\/vue-shopping-mall\/data\/goods\/getshopcarlist\/[\d+,]*\d+/, 'get', function (options) {
+    const regex = /[\d]+/g;
+    let matchArr = [];
+    let match;
+    let result;
+    while((match = regex.exec(options.url)) != null) {
+        matchArr = matchArr.concat(match)
+    }
+    result = GoodsData.filter(goodsitem => {
+        let flag = false;
+        matchArr.some(item => {
+            if(goodsitem.id == item) {
+                flag = true
+                return true;
+            }
+        })
+        return flag
+    })
+    return {
+        status: 0,
+        message: result
     }
 })

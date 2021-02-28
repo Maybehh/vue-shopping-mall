@@ -33,9 +33,10 @@ Vue.filter('dateFormat', function (dateStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
     return moment(dateStr).format(pattern)
 })
 
+var car = JSON.parse(localStorage.getItem('car') || '[]')
 var store = new Vuex.Store({
     state: {
-        car: []  //购物车商品数据
+        car: car  //购物车商品数据
     },
     mutations: {
         addToCar (state, goodsinfo) {
@@ -52,10 +53,75 @@ var store = new Vuex.Store({
             if(!flag) {
                 state.car.push(goodsinfo)
             }
+
+            localStorage.setItem('car', JSON.stringify(state.car))
+        },
+        updateGoodsInfo (state, goodsinfo) {
+            state.car.some( item => {
+                if(item.id == goodsinfo.id) {
+                    item.count = parseInt(goodsinfo.count)
+                    return true
+                }
+            })
+
+            localStorage.setItem('car', JSON.stringify(state.car))
+        },
+        removeFromCar (state, id) {
+            state.car.some((item, i) => {
+                if(item.id == id) {
+                    state.car.splice(i, 1)
+                    return true
+                }
+            })
+
+            localStorage.setItem('car', JSON.stringify(state.car))
+        },
+        updateGoodsSelected (state, info) {
+            state.car.some( item => {
+                if(item.id == info.id) {
+                    item.selected = info.selected;
+                    return true;
+                }
+            })
+
+            localStorage.setItem('car', JSON.stringify(state.car))
         }
     },
     getters: {
-
+        getAllCount (state) {
+            let c = 0;
+            state.car.forEach( item => {
+                c += item.count;
+            })
+            return c
+        },
+        getGoodsCount (state) {
+            const o = {}
+            state.car.forEach( item => {
+                o[item.id] = item.count
+            })
+            return o
+        },
+        getGoodsSelected (state) {    //注意getters作为方法调用时和属性调用时的区别
+            const o = {}
+            state.car.forEach( item => {
+                o[item.id] = item.selected
+            })
+            return o
+        },
+        getGoodsCountAndAmount (state) {
+            const o = {
+                count: 0,
+                amount: 0
+            }
+            state.car.forEach( item => {
+                if(item.selected) {
+                    o.count += item.count
+                    o.amount += item.price * item.count
+                }
+            })
+            return o
+        }
     }
 })
 
